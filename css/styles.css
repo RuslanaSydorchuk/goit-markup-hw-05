@@ -80,7 +80,9 @@ img {
     padding-bottom: 32px;
     position: relative;
 
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition-property: color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1) ;
 
     color: var(--title-text-color);
     font-weight: 500;
@@ -133,7 +135,9 @@ img {
     letter-spacing: 0.02em;
     text-decoration: none;
 
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition-property: color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 
     display: flex;
 }
@@ -197,7 +201,9 @@ img {
     padding: 10px 32px;
     min-width: 200;
 
-    transition: filter 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition-property: filter;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .hero-button:hover,
 .hero-button:focus{
@@ -206,6 +212,8 @@ img {
 
 .backdrop{
     position: fixed;
+    z-index: 1;
+
     top: 0;
     left: 0;
     width: 100%;
@@ -425,11 +433,17 @@ img {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    transition: color, background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    transition-property: color, background-color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .icon-member-social-link {
     fill: currentColor
+    transition-property: fill;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .member-social-link:hover,
@@ -471,7 +485,9 @@ img {
     border-radius: 4px;
     fill: var(--icons-color);
 
-    transition: fill, border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition-property: fill, border;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .icon-client{
@@ -544,7 +560,9 @@ address {
     text-decoration: none;
     cursor: pointer;
 
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition-property: color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);;
 }
 
 .contact-list .link:first-child{
@@ -580,8 +598,10 @@ b{
     display: flex;
     justify-content: space-around;
     align-items: center;
-
-    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    
+    transition-property: background-color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .company-social-link:hover,
@@ -627,7 +647,9 @@ b{
     border: none;
     border-radius: 4px;
 
-    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition-property: box-shadow, color, background-color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .filter-button:hover,
@@ -661,11 +683,15 @@ b{
 .product-link{
     text-decoration: none;
     display: block;
-    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    transition-property: box-shadow, transform, opacity;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .product-link:hover{
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+    
 }
 
 .product-thumb{
@@ -674,7 +700,7 @@ b{
 }
 
 .product-link:hover .product-description{
-    transform: translatex(0);
+    transform: translateY(0);
     opacity: 1;
 }
 
@@ -685,11 +711,12 @@ b{
 
 .product-description {
     position: absolute;
+    left: 0;
     bottom: 0;
     width: 100%;
     height: 100%;
-    transform: translatey(100%);
-    transition: transform, opasity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transform: translateY(100%);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
     opacity: 0;
     margin: 0;
     padding: 63px 24px;
